@@ -24,9 +24,12 @@ chmod +x gh-download.sh
 
 不想敲命令？用本地网页版（需要 [Bun](https://bun.sh)）：
 
+单文件，一个链接就能拿到：
+
 ```bash
-bun web/server.ts          # 或 bun run ui
-# 打开 http://localhost:8787
+curl -fsSL https://embedai.com.cn/dl/gh-download-ui.ts -o gh-download-ui.ts
+bun gh-download-ui.ts        # 打开 http://localhost:8787
+# 或： git clone 后 bun run ui
 ```
 
 - 粘贴 **`owner/repo` + `tag`**（或直接一个 GitHub 下载链接）→ **列出资产** → **勾选** → **下载**；

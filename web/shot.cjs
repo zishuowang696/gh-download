@@ -1,0 +1,13 @@
+const { chromium } = require('/home/admin/.config/opencode/node_modules/playwright')
+;(async () => {
+  const b = await chromium.launch()
+  const p = await b.newPage({ viewport: { width: 1100, height: 1000 }, deviceScaleFactor: 2 })
+  await p.goto('http://127.0.0.1:8787/', { waitUntil: 'load' })
+  await p.fill('#repo', 'BurntSushi/ripgrep')
+  await p.fill('#tag', '14.1.0')
+  await p.click('#list')
+  await p.waitForTimeout(3000)
+  await p.screenshot({ path: '/home/admin/blog/public/img/gh-download-ui.png', fullPage: true })
+  await b.close()
+  console.log('shot ok')
+})().catch((e) => { console.error(e); process.exit(1) })

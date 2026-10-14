@@ -3,6 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "ui": "bun web/server.ts"
+    "ui": "bun gh-download-ui.ts"
   }
 }
