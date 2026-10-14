@@ -119,10 +119,18 @@ EMBEDAI_MIRRORS="https://ghproxy.net https://ghfast.top" EMBEDAI_CONN=16 ./gh-do
 
 ## 相关链接
 
+**站点**
 - 博客（Agent and Edge AI）：<https://embedai.com.cn>
 - 讲解文章：<https://embedai.com.cn/posts/gh-downloader>
 - 工具下载页：<https://embedai.com.cn/tools>
-- GitHub：<https://github.com/zishuowang696>
+- 订阅：<https://embedai.com.cn/feed.xml> · <https://embedai.com.cn/en/feed.xml>
+
+**相关仓库**（GitHub：<https://github.com/zishuowang696>）
+- [embedai](https://github.com/zishuowang696/embedai) — Jetson 边缘 AI 发行版（Yocto / KAS）
+- [agent-from-scratch](https://github.com/zishuowang696/agent-from-scratch) — 从 0 写一个 AI Agent
+- [mcp-demo](https://github.com/zishuowang696/mcp-demo) / [mcp-client](https://github.com/zishuowang696/mcp-client) — MCP 服务端 / 客户端示例
+- [agent-on-jetson](https://github.com/zishuowang696/agent-on-jetson) — 把 Agent 部署到 Jetson
+- [weekly-topics-agent](https://github.com/zishuowang696/weekly-topics-agent) — 每周选题 Agent（模板）
 
 ## 许可
 
