@@ -117,6 +117,14 @@ EMBEDAI_MIRRORS="https://ghproxy.net https://ghfast.top" EMBEDAI_CONN=16 ./gh-do
 - **不要**用公共代理下敏感内容；
 - 镜像质量会变：所以脚本**先测速/验 Range**，不要写死。
 
+## 支持这个项目
+
+如果这个工具帮到了你，可以**请我喝杯咖啡**（爱发电）：
+
+<https://afdian.com/a/embedai>
+
+（也欢迎 Star、提 Issue、分享给需要的人。）
+
 ## 相关链接
 
 **站点**
