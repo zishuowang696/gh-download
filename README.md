@@ -117,10 +117,13 @@ EMBEDAI_MIRRORS="https://ghproxy.net https://ghfast.top" EMBEDAI_CONN=16 ./gh-do
 - **不要**用公共代理下敏感内容；
 - 镜像质量会变：所以脚本**先测速/验 Range**，不要写死。
 
+## 相关链接
+
+- 博客（Agent and Edge AI）：<https://embedai.com.cn>
+- 讲解文章：<https://embedai.com.cn/posts/gh-downloader>
+- 工具下载页：<https://embedai.com.cn/tools>
+- GitHub：<https://github.com/zishuowang696>
+
 ## 许可
 
 MIT
-
----
-
-讲解文章：<https://embedai.com.cn/posts/gh-downloader>
