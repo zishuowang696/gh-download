@@ -1,0 +1,8 @@
+{
+  "name": "gh-download",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "ui": "bun web/server.ts"
+  }
+}

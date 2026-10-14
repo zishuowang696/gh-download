@@ -20,6 +20,19 @@ chmod +x gh-download.sh
 ./gh-download.sh https://github.com/<owner>/<repo>/releases/download/<tag>/<file>
 ```
 
+## 本地 Web UI（可选）
+
+不想敲命令？用本地网页版（需要 [Bun](https://bun.sh)）：
+
+```bash
+bun web/server.ts          # 或 bun run ui
+# 打开 http://localhost:8787
+```
+
+- 粘贴 **`owner/repo` + `tag`**（或直接一个 GitHub 下载链接）→ **列出资产** → **勾选** → **下载**；
+- 后端仍走同一套逻辑（**多镜像 Range 校验 + aria2 多源并行 + 续传**），**日志实时滚动**；
+- 参数照旧：`EMBEDAI_MIRRORS` / `EMBEDAI_JOBS` / `EMBEDAI_CONN`；`GITHUB_TOKEN`（可选，匿名 API 有限流）。
+
 ## 更多例子
 
 ```bash
