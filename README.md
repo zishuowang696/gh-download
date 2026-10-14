@@ -20,6 +20,36 @@ chmod +x gh-download.sh
 ./gh-download.sh https://github.com/<owner>/<repo>/releases/download/<tag>/<file>
 ```
 
+## 更多例子
+
+```bash
+# 1) 下某个 release 的「全部资产」（自动列出来，全下）
+./gh-download.sh owner/repo v1.2.3 -d ./dl
+
+# 2) 只要 Linux 的
+./gh-download.sh owner/repo v1.2.3 --pattern '*linux*' -d ./dl
+
+# 3) 只要 Windows 的
+./gh-download.sh owner/repo v1.2.3 --pattern '*windows*' -d ./dl
+
+# 4) 压缩包 + 校验文件一起下
+./gh-download.sh owner/repo v1.2.3 --pattern '*.zip' --pattern 'SHA256SUMS' -d ./dl
+
+# 5) 只下某个分卷（如 Yocto sstate 缓存）
+./gh-download.sh zishuowang696/embedai sstate-jetson --pattern 'sstate-*.part-*' -d ./sst
+
+# 6) 直接给一个 GitHub 下载链接（不用 repo/tag）
+./gh-download.sh https://github.com/owner/repo/releases/download/v1.2.3/file.zip
+
+# 7) 换镜像 / 提高并发分段
+EMBEDAI_MIRRORS="https://ghproxy.net https://ghfast.top" EMBEDAI_CONN=16 ./gh-download.sh owner/repo v1.2.3
+
+# 8) 下断了？直接重跑同一条命令 —— 自动续传
+./gh-download.sh owner/repo v1.2.3 -d ./dl
+```
+
+> 提示：`--pattern` 可重复多次；`-d` 指定目录；不确定有哪些资产时**先不带 pattern 跑一次**，它会打印"资产数"并全下。
+
 ## Windows / PowerShell 版
 
 `gh-download.ps1`（Windows 10+ 自带 `curl.exe`）：
