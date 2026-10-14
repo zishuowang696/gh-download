@@ -20,6 +20,21 @@ chmod +x gh-download.sh
 ./gh-download.sh https://github.com/<owner>/<repo>/releases/download/<tag>/<file>
 ```
 
+## Windows / PowerShell 版
+
+`gh-download.ps1`（Windows 10+ 自带 `curl.exe`）：
+
+```powershell
+# 按 owner/repo + tag，过滤后下载
+./gh-download.ps1 <owner/repo> <tag> -Pattern '*x86_64-pc-windows-msvc.zip' -Dir .\dl
+
+# 或直接给 URL
+./gh-download.ps1 https://github.com/<owner>/<repo>/releases/download/<tag>/<file>
+```
+
+依赖：`curl.exe`（自带）；**`aria2c`**（推荐，`winget install aria2.aria2`）；`gh`（可选，按仓库列资产时用）。
+> 逻辑与 bash 版一致；已在 Linux 上用 **PowerShell 7.6** 实测通过（同一脚本也适用于 Windows PowerShell）。
+
 ## 环境变量
 
 | 变量 | 默认 | 说明 |
