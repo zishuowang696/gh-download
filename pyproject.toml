@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gh-download-embedai"
+version = "0.1.0"
+description = "China-friendly GitHub Release downloader: multi-mirror parallel ranged download + sha256, zero external binaries (no aria2/curl/gh/jq). By embedai.com.cn"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [{ name = "embedai.com.cn", email = "zishuowang696@gmail.com" }]
+keywords = ["github", "release", "download", "mirror", "ghproxy", "cli", "edge"]
+classifiers = [
+  "Environment :: Console",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Internet :: File Transfer Protocol (FTP)",
+  "Topic :: System :: Networking",
+]
+dependencies = []
+
+[project.scripts]
+gh-download = "gh_download:main"
+
+[project.urls]
+Homepage = "https://github.com/zishuowang696/gh-download"
+Repository = "https://github.com/zishuowang696/gh-download"
+"Blog (embedai.com.cn)" = "https://embedai.com.cn/posts/gh-downloader"
+
+[tool.setuptools]
+py-modules = ["gh_download"]
